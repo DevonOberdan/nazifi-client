@@ -14,7 +14,6 @@ import { createBrowserHistory } from 'history';
 var hist = createBrowserHistory()
 
 ReactDOM.render(
-  // <App/>,
   <Router history={hist}>
       <Switch>
         <Route path="/" component={App}/>

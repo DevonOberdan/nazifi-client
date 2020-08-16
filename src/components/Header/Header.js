@@ -12,9 +12,9 @@ import { Toolbar, Button } from '@material-ui/core'
 export default function Header(){
     return (
         <AppBar>
-            <Toolbar>
-                <Button>
-                    <Link to="/">Home</Link>
+            <Toolbar >
+                <Button color="secondary" variant="contained">TEST
+                    {/* <Link to="/">Home</Link> */}
                 </Button>
             </Toolbar>
         </AppBar>

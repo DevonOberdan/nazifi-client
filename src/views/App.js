@@ -3,9 +3,26 @@ import logo from 'logo.svg';
 import 'assets/css/App.css';
 import Header from 'components/Header/Header';
 
+import { colorTest, primaryColor, secondaryColor, otherColor } from 'assets/jss/nazifi-client-styles'
+
+import { makeStyles, createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
+
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+
+const theme = createMuiTheme({
+  palette: {
+      primary: primaryColor,
+      secondary: secondaryColor,
+  }
+})
+
+
 function App() {
   return (
-    <Header/>
+    <ThemeProvider theme={theme}>
+      <Header/>
+    </ThemeProvider>
 
     // <div className="App">
     //   <header className="App-header">
