@@ -1,0 +1,28 @@
+/* Color Theme Swatches in Hex */
+.nazifi_cool-1-hex { color: #79B2CD; }
+.nazifi_cool-2-hex { color: #01657F; }
+.nazifi_cool-3-hex { color: #003545; }
+.nazifi_cool-4-hex { color: #16263D; }
+.nazifi_cool-5-hex { color: #000000; }
+
+/* Color Theme Swatches in RGBA */
+.nazifi_cool-1-rgba { color: rgba(121, 178, 205, 1); }
+.nazifi_cool-2-rgba { color: rgba(1, 101, 127, 1); }
+.nazifi_cool-3-rgba { color: rgba(0, 53, 69, 1); }
+.nazifi_cool-4-rgba { color: rgba(22, 38, 61, 1); }
+.nazifi_cool-5-rgba { color: rgba(0, 0, 0, 1); }
+
+
+/* Color Theme Swatches in Hex */
+.nazifi_warm-1-hex { color: #854464; }
+.nazifi_warm-2-hex { color: #B25572; }
+.nazifi_warm-3-hex { color: #EB6E7E; }
+.nazifi_warm-4-hex { color: #FF8182; }
+.nazifi_warm-5-hex { color: #F5BB93; }
+
+/* Color Theme Swatches in RGBA */
+.nazifi_warm-1-rgba { color: rgba(133, 68, 100, 1); }
+.nazifi_warm-2-rgba { color: rgba(178, 85, 114, 1); }
+.nazifi_warm-3-rgba { color: rgba(235, 110, 126, 1); }
+.nazifi_warm-4-rgba { color: rgba(255, 129, 130, 1); }
+.nazifi_warm-5-rgba { color: rgba(245, 187, 147, 1); }
