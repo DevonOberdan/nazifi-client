@@ -5,7 +5,7 @@ import 'assets/css/App.css';
 
 
 import Header from 'components/Header/Header';
-import IntroSection from 'components/Section/IntroSection';
+import IntroSection from 'components/Sections/IntroSection/IntroSection';
 
 //import { colorTest, primaryColor, secondaryColor, otherColor } from 'assets/jss/nazifi-client-styles'
 
@@ -15,12 +15,13 @@ import { makeStyles, createMuiTheme, ThemeProvider } from "@material-ui/core/sty
 
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
+import FeaturesSection from 'components/Sections/FeaturesSection/FeaturesSection';
 
 
 
 function App() {
 
-  const [darkState, setDarkState] = useState(false)
+  const [darkState, setDarkState] = useState(true)
 
 
   const handleThemeChange = () => {
@@ -31,7 +32,8 @@ function App() {
   return (
     <ThemeProvider theme={darkState ? DarkTheme : LightTheme}>
       <Header darkMode={darkState} themeChange={handleThemeChange}/>
-      <IntroSection backGround="secondary" testColor="#FFF000"/>
+      <IntroSection/>
+      <FeaturesSection/>
     </ThemeProvider>
   );
 }
