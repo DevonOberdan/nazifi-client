@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {hexToRgb, makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+
 const useStyles = makeStyles(theme => ({
   root: {
     color: theme.palette.common.white,
@@ -16,8 +17,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   container: {
-    marginTop: theme.spacing(120),
+    marginTop: theme.spacing(20),
     marginBottom: theme.spacing(14),
+    paddingBottom: '100px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

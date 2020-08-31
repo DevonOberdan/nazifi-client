@@ -1,10 +1,29 @@
 import React,{useEffect, useState} from 'react'
 
-import makeStyles from '@material-ui/core/styles'
+import {makeStyles} from '@material-ui/core/styles'
 
-import { Typography } from '@material-ui/core'
-import IntroSectionLayout from 'components/Sections/IntroSection/IntroSectionLayout'
+import { Typography, Card, Grid } from '@material-ui/core'
+import FeaturesSectionLayout from 'components/Sections/FeaturesSection/FeaturesSectionLayout'
+import SimpleCard from 'components/Cards/SimpleCard'
 
+import Fade from 'react-reveal/Fade'
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+      display: 'flex',
+      
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    },
+    titlePadding: {
+
+    },
+  }));
 
 export default function FeaturesSection(props){
     
@@ -17,13 +36,34 @@ export default function FeaturesSection(props){
     }, [])
 
 
+    const classes = useStyles()
+
     return (
-        <IntroSectionLayout>
-            <Typography color="inherit" align="inherit" variant="h2">
-                Features
-            </Typography>
+        <div className={classes.root}>
+        <FeaturesSectionLayout>
 
+            <Fade bottom opposite>
+                <Typography color="textPrimary" align="inherit" variant="h3">
+                    Features
+                </Typography>
+            </Fade>
 
-        </IntroSectionLayout>
+            <Grid container spacing={6}>
+                <Grid item xs={3}> 
+                    <SimpleCard title="Backups"></SimpleCard>
+                </Grid>
+                <Grid item xs={3}> 
+                    <SimpleCard title="Scheduling"></SimpleCard>
+                </Grid>                
+                <Grid item xs={3}> 
+                    <SimpleCard title="Backups"></SimpleCard>
+                </Grid>                
+                <Grid item xs={3}> 
+                    <SimpleCard title="Backups"></SimpleCard>
+                </Grid>
+            </Grid>
+
+        </FeaturesSectionLayout>
+        </div>
     )
 }

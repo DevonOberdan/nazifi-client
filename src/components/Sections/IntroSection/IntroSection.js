@@ -6,7 +6,6 @@ import IntroSectionLayout from 'components/Sections/IntroSection/IntroSectionLay
 
 import { makeStyles, hexToRgb } from "@material-ui/core/styles";
 
-import soup from "assets/img/soup.jpg"
 import { Container } from '@material-ui/core';
 import MyButton from 'components/Buttons/MyButton'
 
@@ -20,13 +19,15 @@ import NazifiWarm from 'assets/img/logo/Nazifi_warm4x.png'
 import NazifiWarmText from 'assets/img/logo/Nazifi_warm_text4x.png'
 
 
+import Fade from "react-reveal/Fade"
+
 const backgroundImage =
   'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
 const useStyles = makeStyles(theme => ({
     root: {
       height: '400vh',
-      background: `linear-gradient(45deg, ${theme.palette.secondary.light} 5%, ${theme.palette.secondary.dark} 60%)`,
+      background: `linear-gradient(45deg, ${theme.palette.secondary.dark} 5%, ${theme.palette.secondary.light} 60%)`,
 
      // backgroundColor: `${theme.palette.background.default}`,
       display: 'flex',
@@ -43,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     background: {
-      backgroundImage: `url(${NazifiWarmText})`,
+      // backgroundImage: `url(${NazifiWarmText})`,
 
       height: '100vh',
       boxShadow: `0 4px 30px 2px rgba(${hexToRgb(theme.palette.background.default)}, .3)`,
@@ -69,31 +70,27 @@ const useStyles = makeStyles(theme => ({
     },
   }));
   
-  export default function SimplePaper() {
+  export default function IntroSection() {
     const classes = useStyles();
   
     return (
-      //  <div className={classes.root}>
       <IntroSectionLayout backgroundClassName={classes.background}>
-          {/* <Typography color="inherit" align="center" variant="h2" marked="center">
-            Nazifi
-          </Typography> */}
-          {/* <img className={classes.logo} src={NazifiWarmText}></img> */}
-          <Typography
-            color="inherit"
-            align="center"
-            variant="h5"
-            className={classes.h4}
-          >
-            Discord Backups for your Enterprise.
-          </Typography>
-{/* 
-        <Paper className={classes.paper} elevation={3}>  
-        <MyButton buttonText="Press me"/>
-        </Paper> */}
+          <Fade delay = {500} duration={3000}>
+            <img className={classes.logo} src={NazifiWarmText}/>
+          </Fade>
+          
+          <Fade bottom delay={2000}>
 
+            <Typography
+              color="inherit"
+              align="center"
+              variant="h5"
+              className={classes.h4}
+            >
+              Discord Backups for your Enterprise.
+            </Typography>
+          </Fade>
       </IntroSectionLayout>
-    //  </div>
     );
   }
 
