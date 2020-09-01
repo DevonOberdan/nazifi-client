@@ -7,8 +7,6 @@ import 'assets/css/App.css';
 import Header from 'components/Header/Header';
 import IntroSection from 'components/Sections/IntroSection/IntroSection';
 
-//import { colorTest, primaryColor, secondaryColor, otherColor } from 'assets/jss/nazifi-client-styles'
-
 import { LightTheme, DarkTheme } from 'assets/jss/nazifi-client-styles'
 
 import { makeStyles, createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
@@ -46,8 +44,8 @@ function App() {
 
       <Body/>
 
-      <Footer content={
-          <div>
+      <Footer>
+        <div>
             <div className={classes.left}>
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
@@ -76,8 +74,7 @@ function App() {
                 Devon Oberdan
             </div>
           </div>
-        }
-      />
+      </Footer>
     </ThemeProvider>
   );
 }

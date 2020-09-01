@@ -46,12 +46,29 @@ const useStyles = makeStyles(theme => ({
     right: {
         flex: 1,
         display: 'flex',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
     },
     logoText: {
         fontFamily: 'arbotek',
         color: theme.palette.primary.main.light
     },
+
+    root:{
+        display:'flex',
+        '& > *':{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        },
+        'first-child > span':{
+            marginRight: 'auto'
+        },
+        'last-child > span':{
+            marginLeft: 'auto'
+        }
+    },
+
 }))
 
 
@@ -80,17 +97,18 @@ export default function Header(props){
 
     return (
         <AppBar className = {appBarClasses}>
-            <Toolbar >
+            <Toolbar classname={classes.root}>
                 {/* <Fade duration={100} when={!onTop}>
-                    <Typography className={classes.logoText} variant="h3" color="secondary">
-                        Nazifi
+                    <Typography className={`${classes.logoText}`} variant="h3" color="secondary">
+                        <span>Nazifi</span>
                     </Typography>
                 </Fade> */}
+
                 <HeaderLinks onTop={onTop}/>
                     
-                <div className={classes.right}>                    
-                    <Switch checked={props.darkMode} onChange={props.themeChange}/>
-                </div>
+                {/* <div className={classes.right}>                    
+                    <span><Switch checked={props.darkMode} onChange={props.themeChange}/> </span>
+                </div> */}
             </Toolbar>
         </AppBar>
     )

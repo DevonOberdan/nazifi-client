@@ -5,13 +5,9 @@ import Typography from "@material-ui/core/Typography"
 
 import PropTypes from 'prop-types'
 
-import { useTheme, hexToRgb} from '@material-ui/core/styles';
+import { useTheme} from '@material-ui/core/styles';
 
-//import hexToRgb from 'components/hexToRGB'
-
-const color="#FFF000";
-
-//const theme = {}
+import hexToRgb from 'components/hexToRGB'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -38,7 +34,6 @@ export default function MyButton(props){
     const theme = useTheme()
     const classes = useStyles(props)
 
-   // return <Button className={classes.root}>Press me</Button>
     return (
     <Button className={classes.root}  size={props.size}>
         {props.buttonText}    

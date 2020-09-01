@@ -33,7 +33,7 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        {content}
+        {children}
         <div className={classes.clearFix} />
       </div>
     </footer>

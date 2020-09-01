@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.white,
     position: 'relative',
     display: 'flex',
-    alsignItems: 'center',
+    alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       height: '100vh',
       minHeight: 500,

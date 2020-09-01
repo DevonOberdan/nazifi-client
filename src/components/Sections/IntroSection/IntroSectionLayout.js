@@ -6,54 +6,24 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.common.white,
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    [theme.breakpoints.up('sm')]: {
-      height: '100vh',
-      minHeight: 500,
-      maxHeight: 1300,
-    },
+
   },
   container: {
-    marginTop: theme.spacing(20),
-    marginBottom: theme.spacing(14),
-    paddingBottom: '100px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+
   },
   backdrop: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    //backgroundColor: theme.palette.common.black,
-    //backgroundColor: `linear-gradient(45deg, ${theme.palette.secondary.light} 5%, ${theme.palette.secondary.dark} 60%)`,
-    opacity: 0.5,
-    zIndex: -1,
+    position:'absolute',
+    zIndex:-1
   },
   background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: '30%',
-    backgroundRepeat: 'no-repeat',
-    zIndex: -2,
-  },
-  arrowDown: {
-    position: 'absolute',
-    bottom: theme.spacing(4),
+
   },
 }));
 
 function IntroSectionLayout(props) {
   const { backgroundClassName, children } = props;
   const classes = useStyles()
+  
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
