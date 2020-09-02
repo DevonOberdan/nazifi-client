@@ -113,6 +113,8 @@ const DarkTheme = createMuiTheme({
       type: 'dark',
       primary: nazifiCoolDark,
       secondary: nazifiWarmDark,
+     // warmDark: ,
+     // coolDark:
     }
 })
 

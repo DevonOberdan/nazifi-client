@@ -24,6 +24,9 @@ import classNames from 'classnames'
 
 import Fade from 'react-reveal/Fade'
 
+import hexToRgb from 'components/hexToRGB'
+
+
 const headerFadeInTime = 500
 
 const useStyles = makeStyles(theme => ({
@@ -36,7 +39,7 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: '150px',
         paddingTop: '10px',
         paddingBottom: '10px',
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.background.default//`rgba(${hexToRgb(theme.palette.background.default)}, .75)`
     },
     appBarScrolled: {
         backgroundColor: 'transparent',
@@ -75,15 +78,20 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props){
 
     const logoEndPoint = 650
+    const slidePoint = 1200
 
     const classes = useStyles()
 
     const [onTop, setOnTop] = useState(true)
 
+    const [atSlidePoint, setAtSlidePoint] = useState(true)
+
+    const trigger = useScrollTrigger()
+
     useEffect(() => {
         const checkForTop = () => {
             setOnTop(window.pageYOffset < logoEndPoint)
-
+            setAtSlidePoint(window.pageYOffset > slidePoint)
         };
         window.addEventListener("scroll", checkForTop);
         return () => window.removeEventListener("scroll", checkForTop);
@@ -96,6 +104,7 @@ export default function Header(props){
     })
 
     return (
+        <Slide appear={false} in={atSlidePoint ? !trigger : true}>
         <AppBar className = {appBarClasses}>
             <Toolbar classname={classes.root}>
                 {/* <Fade duration={100} when={!onTop}>
@@ -111,5 +120,6 @@ export default function Header(props){
                 </div> */}
             </Toolbar>
         </AppBar>
+        </Slide>
     )
 }

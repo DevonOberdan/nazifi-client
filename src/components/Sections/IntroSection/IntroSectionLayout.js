@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   backdrop: {
     position:'absolute',
-    zIndex:-1
+    zIndex:-1,
   },
   background: {
 

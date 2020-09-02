@@ -1,5 +1,7 @@
 import {makeStyles, useTheme} from '@material-ui/core/styles'
 
+import NazifiCoolText from 'assets/img/logo/Nazifi_cool_text4x.png'
+
 //const theme = useTheme()
 
 const introStyles = theme => ({
@@ -30,38 +32,55 @@ const introStyles = theme => ({
             // opacity: 0.5
         },
 
+        arbotek:{
+          fontFamily: 'arbotek',
+          color: theme.palette.secondary.dark,
+          fontSize: '6em',
+          [theme.breakpoints.down('sm')]: {
+            fontSize: '2em'
+          },
+        },
+
+        textBuffer:{
+          marginTop: theme.spacing(6)
+        },
+
         container:{
-            // marginTop: theme.spacing(14),
-            // marginBottom: theme.spacing(14),
+           paddingTop: theme.spacing(10),
+           paddingBottom: theme.spacing(14),
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             
-
         },
     
         background: {
-          // backgroundImage: `url(${NazifiWarmText})`,
-    
-           height: '100vh',
-          // boxShadow: `0 4px 30px 2px rgba(${hexToRgb(theme.palette.background.default)}, .3)`,
-           backgroundColor: theme.palette.secondary.dark, // Average color of the background image.
-           backgroundPosition: 'center',
-           zIndex:-1,
+          //backgroundImage: `url(${NazifiCoolText})`,
+          position: 'absolute',
+          left:0,
+          right:0,
+          top:0,
+          bottom:0,
 
-           
+
+          height: '100vh',
+          // boxShadow: `0 4px 30px 2px rgba(${hexToRgb(theme.palette.background.default)}, .3)`,
+          backgroundColor: theme.palette.background.default, // Average color of the background image.
+          backgroundPosition: 'center',
+          zIndex:-1,
+          backgroundSize: '30%',
+          backgroundRepeat: "no-repeat"
+
         },
     
         backgroundDefault: {
-            position: 'absolute',
+            position: 'relative',
             left:0,
             right:0,
             top:0,
             bottom:0,
 
-
             zIndex:-2,
-            backgroundSize: '30%',
             backgroundRepeat: "no-repeat"
 
             
@@ -73,15 +92,14 @@ const introStyles = theme => ({
           //   marginTop: theme.spacing(10),
           // },
         },
-        more: {
-          // marginTop: theme.spacing(2),
-        },
+
         logo:{
-          maxWidth: '30%',
-          maxHeight: '30%',
-          minWidth: '30%',
-          minHeight: '30%',
+          maxWidth: '40%',
+          maxHeight: '40%',
+          minWidth: '40%',
+          minHeight: '40%',
         },
+
 })
 
 

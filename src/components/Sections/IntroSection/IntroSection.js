@@ -23,6 +23,7 @@ import introStyles from 'components/Sections/IntroSection/introStyles'
 import Fade from "react-reveal/Fade"
 
 import classNames from 'classnames'
+import 'assets/css/App.css'
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
@@ -36,32 +37,47 @@ const useStyles = makeStyles(introStyles)
       <section className={classes.root}>
         <Container className={classes.container}>
           <Fade delay = {500} duration={3000}>
-            <img className={classes.logo} src={NazifiCool}/>
-          </Fade>
+            <img className={classes.logo} src={NazifiWarm}/>
+
+
 
             <Typography
-              color="inherit"
+              // color="primary"
               align="center"
-              variant="h5"
-              className={classes.h4}
+              variant="h1"
+              className={classes.arbotek}
             >
-              <Fade cascade bottom delay={1000}>
-                Nazifi
-              </Fade>
+              N A Z I F I
             </Typography>
+            {/* <Typography align='center' variant='h1' className='title'>
+              NAZIFI
+            </Typography> */}
+
+          </Fade>
+
+            {/* <Typography
+              color="textPrimary"
+              align="center"
+              variant="h1"
+              className={classes.arbotek}
+            >
+              <Fade bottom delay={500}>
+                NAZIFI
+              </Fade>
+            </Typography> */}
           <Fade cascade bottom delay={2000}>
 
             <Typography
-              color="inherit"
+              color="textPrimary"
               align="center"
               variant="h5"
-              className={classes.h4}
+              className={classes.textBuffer}
             >
               Discord Backups for your Enterprise.
             </Typography>
           </Fade>
           <div className={classes.backdrop}></div> 
-          <div className={classNames(classes.background, classes.backgroundDefault)} />
+          <div className={classNames(classes.background)}/>
 
         </Container>
       </section>

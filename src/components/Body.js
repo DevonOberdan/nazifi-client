@@ -16,12 +16,14 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.background.paper,
       position: "relative",
       zIndex: "3",
-      padding: theme.spacing(10)
+      padding: theme.spacing(10),
     },
     backColor: {
-        background: `linear-gradient(45deg, ${theme.palette.secondary.main} 5%, ${theme.palette.secondary.dark} 60%)`,
+        background: `linear-gradient(45deg, ${theme.palette.secondary.light} 5%, ${theme.palette.secondary.main} 60%)`,
         height: '200vh',
-        padding: theme.spacing(10)
+        padding: theme.spacing(10),
+        paddingTop: theme.spacing(24)
+
     },
 }));
 
