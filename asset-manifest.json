@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/nazifi-client/static/css/main.344a1351.chunk.css",
+    "main.js": "/nazifi-client/static/js/main.e7e721ad.chunk.js",
+    "main.js.map": "/nazifi-client/static/js/main.e7e721ad.chunk.js.map",
+    "runtime-main.js": "/nazifi-client/static/js/runtime-main.f786b581.js",
+    "runtime-main.js.map": "/nazifi-client/static/js/runtime-main.f786b581.js.map",
+    "static/js/2.12b0cf3a.chunk.js": "/nazifi-client/static/js/2.12b0cf3a.chunk.js",
+    "static/js/2.12b0cf3a.chunk.js.map": "/nazifi-client/static/js/2.12b0cf3a.chunk.js.map",
+    "index.html": "/nazifi-client/index.html",
+    "precache-manifest.fae536310742cd694054e68775021f19.js": "/nazifi-client/precache-manifest.fae536310742cd694054e68775021f19.js",
+    "service-worker.js": "/nazifi-client/service-worker.js",
+    "static/css/main.344a1351.chunk.css.map": "/nazifi-client/static/css/main.344a1351.chunk.css.map",
+    "static/js/2.12b0cf3a.chunk.js.LICENSE.txt": "/nazifi-client/static/js/2.12b0cf3a.chunk.js.LICENSE.txt",
+    "static/media/Nazifi_cool-dark4x.png": "/nazifi-client/static/media/Nazifi_cool-dark4x.ccca1367.png",
+    "static/media/Nazifi_cool4x.png": "/nazifi-client/static/media/Nazifi_cool4x.6c2a20e8.png",
+    "static/media/Nazifi_cool_text4x.png": "/nazifi-client/static/media/Nazifi_cool_text4x.865c3638.png",
+    "static/media/Nazifi_warm4x.png": "/nazifi-client/static/media/Nazifi_warm4x.fbcb3b61.png",
+    "static/media/Nazifi_warm_text4x.png": "/nazifi-client/static/media/Nazifi_warm_text4x.8eea149c.png",
+    "static/media/logo.svg": "/nazifi-client/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f786b581.js",
+    "static/js/2.12b0cf3a.chunk.js",
+    "static/css/main.344a1351.chunk.css",
+    "static/js/main.e7e721ad.chunk.js"
+  ]
+}
