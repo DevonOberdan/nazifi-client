@@ -5,11 +5,16 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import hexToRgb from 'components/hexToRGB';
 
 const useStyles = makeStyles(theme => ({
   root: {
     minWidth: 275,
-    background: `linear-gradient(45deg, ${theme.palette.secondary.main} 5%, ${theme.palette.secondary.dark} 60%)`
+    //background: `linear-gradient(45deg, ${theme.palette.primary.dark} 20%, ${theme.palette.primary.main} 95%)`,
+    textAlign: 'center',
+    backgroundColor: theme.palette.secondary.light,
+    boxShadow: `0 4px 20px 2px rgba(${hexToRgb(theme.palette.secondary.light)}, .3)`,
+ 
   },
   bullet: {
     display: 'inline-block',
@@ -18,6 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontSize: 14,
+    //textAlign: 'center'
   },
   pos: {
     marginBottom: 12,

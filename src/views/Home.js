@@ -15,7 +15,7 @@ import Footer from 'components/Footer/Footer';
 
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 
-import Body from 'components/Body'
+import Body from 'components/Body/Body'
 
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"

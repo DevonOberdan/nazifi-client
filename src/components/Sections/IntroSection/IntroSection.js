@@ -4,13 +4,9 @@ import sectionStyle from 'assets/jss/sectionStyles'
 
 import IntroSectionLayout from 'components/Sections/IntroSection/IntroSectionLayout'
 
-import { makeStyles, hexToRgb } from "@material-ui/core/styles";
+import { makeStyles} from "@material-ui/core/styles";
 
-import { Container } from '@material-ui/core';
-import MyButton from 'components/Buttons/MyButton'
-
-import Typography from '@material-ui/core/Typography'
-import Paper from '@material-ui/core/Paper'
+import { Container, Typography } from '@material-ui/core';
 
 import NazifiCool from 'assets/img/logo/Nazifi_cool4x.png'
 import NazifiCoolText from 'assets/img/logo/Nazifi_cool_text4x.png'
@@ -23,10 +19,6 @@ import introStyles from 'components/Sections/IntroSection/introStyles'
 import Fade from "react-reveal/Fade"
 
 import classNames from 'classnames'
-import 'assets/css/App.css'
-
-const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
 const useStyles = makeStyles(introStyles)
   
@@ -34,8 +26,7 @@ const useStyles = makeStyles(introStyles)
     const classes = useStyles();
   
     return (
-      <section className={classes.root}>
-        <Container className={classes.container}>
+      <IntroSectionLayout backgroundClassName={classes.background}>
           <Fade delay = {500} duration={3000}>
             <img className={classes.logo} src={NazifiWarm}/>
 
@@ -49,9 +40,6 @@ const useStyles = makeStyles(introStyles)
             >
               N A Z I F I
             </Typography>
-            {/* <Typography align='center' variant='h1' className='title'>
-              NAZIFI
-            </Typography> */}
 
           </Fade>
 
@@ -76,11 +64,11 @@ const useStyles = makeStyles(introStyles)
               Discord Backups for your Enterprise.
             </Typography>
           </Fade>
+
+
           <div className={classes.backdrop}></div> 
           <div className={classNames(classes.background)}/>
-
-        </Container>
-      </section>
+      </IntroSectionLayout>
     );
   }
 

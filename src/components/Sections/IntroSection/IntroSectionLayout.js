@@ -1,24 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {hexToRgb, makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles(theme => ({
-  root: {
+import introStyles from 'components/Sections/IntroSection/introStyles'
 
-  },
-  container: {
 
-  },
-  backdrop: {
-    position:'absolute',
-    zIndex:-1,
-  },
-  background: {
-
-  },
-}));
+const useStyles = makeStyles(introStyles)
 
 function IntroSectionLayout(props) {
   const { backgroundClassName, children } = props;
@@ -29,7 +18,7 @@ function IntroSectionLayout(props) {
       <Container className={classes.container}>
         {children}
         <div className={classes.backdrop} />
-        <div className={clsx(classes.background, backgroundClassName)} />
+        <div className={backgroundClassName} />
       </Container>
     </section>
   );

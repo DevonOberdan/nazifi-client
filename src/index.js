@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {Router, Switch, Route } from 'react-router'
 
 import 'assets/css/index.css';
-import App from 'views/App';
+import Home from 'views/Home';
 import * as serviceWorker from 'components/support/serviceWorker';
 
 
@@ -16,7 +16,7 @@ var hist = createBrowserHistory()
 ReactDOM.render(
   <Router history={hist}>
       <Switch>
-        <Route path="/" component={App}/>
+        <Route path="/" component={Home}/>
       </Switch>
     </Router>,
 

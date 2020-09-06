@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, duration } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { Button, ButtonBase } from "@material-ui/core";
+import { Button, ButtonBase, Typography } from "@material-ui/core";
 
 
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     display: 'flex',
     '& Button': {
-      margin: theme.spacing(1),
+      margin: '0 3em'
     },
   },
 
@@ -45,15 +45,14 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: `0 4px 30px 2px rgba(${hexToRgb(theme.palette.secondary.light)}, .3)`,
   },
 
-  // logoButton:{
-  //   width:'5%'
-  // },
-
   button: {
     borderColor: 'transparent',
     "&:hover":{
-      borderColor: theme.palette.secondary.light
-    }
+      borderColor: theme.palette.secondary.light,
+      boxShadow: `0px 0px 4px 1px rgba(${hexToRgb(theme.palette.secondary.light)}, .2)`,
+
+    },
+
   },
 
   center:{
@@ -79,14 +78,32 @@ export default function HeaderLinks(props) {
   return (
 
     <div className={classes.root}>
-      <Button variant="outlined" className={classes.button}>Test</Button>
+      <Button size="large" variant="outlined" className={classes.button}>
+        {/* <Typography variant="h7"> */}
+        Test
+        {/* </Typography> */}
+      </Button>
 
-      <Button variant="outlined" className={classes.button}>Docs</Button>
+      <Button size="large" variant="outlined" className={classes.button}>
+        {/* <Typography variant="h7"> */}
+        Docs
+        {/* </Typography> */}
+      </Button>
+
       <Fade duration={500} when={!props.onTop}>
         <img src={NazifiWarm} className={logoClasses}/>
       </Fade>
-      <Button variant="outlined" className={classes.button}>Features</Button>
-      <Button variant="outlined" className={classes.button}>Join!</Button>
+
+      <Button size="large" variant="outlined" className={classes.button}>
+        {/* <Typography variant="h6"> */}
+        Features
+        {/* </Typography> */}
+      </Button>
+      <Button size="large" variant="outlined" className={classes.button}>
+      {/* <Typography variant="h6">  */}
+        Join!
+      {/* </Typography> */}
+      </Button>
     </div>
     
     // <div>

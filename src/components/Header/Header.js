@@ -11,7 +11,8 @@ import { Toolbar, Switch, useScrollTrigger, Typography, Button, ListItem, List, 
 
 import MyButton from 'components/Buttons/MyButton'
 
-import { makeStyles } from '@material-ui/core/styles'
+//import { makeStyles } from '@material-ui/core/styles'
+import TaiteNazifi from '@material-ui/core/styles/makeStyles'
 
 import NazifiCool from 'assets/img/logo/Nazifi_cool4x.png'
 import NazifiCoolText from 'assets/img/logo/Nazifi_cool_text4x.png'
@@ -29,9 +30,9 @@ import hexToRgb from 'components/hexToRGB'
 
 const headerFadeInTime = 500
 
-const useStyles = makeStyles(theme => ({
+const useStyles = TaiteNazifi(theme => ({
     appBar: {
-        transition: theme.transitions.create(['background-color'], {
+        transition: theme.transitions.create(['background'], {
           easing: theme.transitions.easing.easeOut,
           duration: 500
         }),
@@ -39,11 +40,13 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: '150px',
         paddingTop: '10px',
         paddingBottom: '10px',
-        backgroundColor: theme.palette.background.default//`rgba(${hexToRgb(theme.palette.background.default)}, .75)`
+        backgroundColor: theme.palette.background.paper
+        //background: `linear-gradient(45deg, ${theme.palette.primary.light} 30%, ${theme.palette.primary.main} 60%)`//`rgba(${hexToRgb(theme.palette.background.default)}, .75)`
     },
     appBarScrolled: {
-        backgroundColor: 'transparent',
-        boxShadow: 'none'
+       // background: `linear-gradient(45deg, transparent 5%, transparent 60%)`,//'transparent',
+        boxShadow: 'none',
+        backgroundColor: 'transparent'
     },
 
     right: {
@@ -77,13 +80,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header(props){
 
-    const logoEndPoint = 650
+    const logoEndPoint = 450
     const slidePoint = 1200
 
     const classes = useStyles()
 
     const [onTop, setOnTop] = useState(true)
-
     const [atSlidePoint, setAtSlidePoint] = useState(true)
 
     const trigger = useScrollTrigger()

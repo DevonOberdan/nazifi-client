@@ -13,15 +13,23 @@ const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       display: 'flex',
-      
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
     },
-    titlePadding: {
+    titleMargins: {
+        marginBottom: theme.spacing(8)
+    },
 
+    gridItem: {
+        margin: theme.spacing(2),
+    },
+
+    test:{
+        display: 'flex-center',
+        justifyContent: 'center',
     },
   }));
 
@@ -29,39 +37,36 @@ export default function FeaturesSection(props){
     
     const [widget, setWidget] = useState()
 
-    useEffect(() => {
-        fetch("https://discordapp.com/api/guilds/735894945629732987/widget.json")
-            .then(response => response.json())
-            .then(data => setWidget(data))
-    }, [])
-
-
     const classes = useStyles()
 
     return (
         <div className={classes.root}>
         <FeaturesSectionLayout>
 
+            <div className={classes.titleMargins}>
             <Fade bottom opposite>
                 <Typography color="textPrimary" align="inherit" variant="h3">
                     Features
                 </Typography>
             </Fade>
+            </div>
 
-            <Grid container spacing={6}>
-                <Grid item xs={3}> 
-                    <SimpleCard title="Backups"></SimpleCard>
+            <div>
+                <Grid container spacing={12} className= {classes.test}>
+                    <Grid item xs={5} className={classes.gridItem}> 
+                        <SimpleCard title="Backups" ></SimpleCard>
+                    </Grid>
+                    <Grid item xs={5} className={classes.gridItem}> 
+                        <SimpleCard title="Scheduling" ></SimpleCard>
+                    </Grid>                
+                    <Grid item xs={5} className={classes.gridItem}> 
+                        <SimpleCard title="Backups" c></SimpleCard>
+                    </Grid>                
+                    <Grid item xs={5} className={classes.gridItem}> 
+                        <SimpleCard title="Backups" ></SimpleCard>
+                    </Grid>
                 </Grid>
-                <Grid item xs={3}> 
-                    <SimpleCard title="Scheduling"></SimpleCard>
-                </Grid>                
-                <Grid item xs={3}> 
-                    <SimpleCard title="Backups"></SimpleCard>
-                </Grid>                
-                <Grid item xs={3}> 
-                    <SimpleCard title="Backups"></SimpleCard>
-                </Grid>
-            </Grid>
+            </div>
 
         </FeaturesSectionLayout>
         </div>

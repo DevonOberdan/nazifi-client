@@ -1,4 +1,6 @@
-import {makeStyles, useTheme} from '@material-ui/core/styles'
+import {useTheme} from '@material-ui/core/styles'
+
+import TaiteNazifi from '@material-ui/core/styles/makeStyles'
 
 import NazifiCoolText from 'assets/img/logo/Nazifi_cool_text4x.png'
 
