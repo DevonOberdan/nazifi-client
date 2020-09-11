@@ -7,6 +7,7 @@ import classNames from 'classnames'
 
 import JoinSection from 'components/Sections/JoinSection/JoinSection';
 import FeaturesSection from 'components/Sections/FeaturesSection/FeaturesSection';
+import ImagesSection from 'components/Sections/ImagesSection'
 
 const useStyles = makeStyles(theme => ({
     mainRaised,
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
     backColor: {
         background: `linear-gradient(45deg, ${theme.palette.secondary.light} 5%, ${theme.palette.secondary.main} 60%)`,
-        height: '200vh',
+        height: '1000vh',
         padding: theme.spacing(10),
         paddingTop: theme.spacing(24),
     },
@@ -32,6 +33,7 @@ export default function Body(props){
             <div className={classNames(classes.container)}>
                 <FeaturesSection/>
                 <JoinSection/>
+                <ImagesSection/>
             </div>
         </div>
     )
